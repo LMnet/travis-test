@@ -23,5 +23,5 @@ before_cache:
   - find $HOME/.ivy2/cache -name "ivydata-*.properties" -print0 | xargs -n10 -0 rm
 
 script:
-  - test
-  - docker:publishLocal
+  - sbt test
+  - sbt docker:publishLocal
